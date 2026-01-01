@@ -1,0 +1,13 @@
+frontend/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.git/
+.env
+QUICK_REFERENCE.md
+SETUP_INSTRUCTIONS.txt
+UPDATES.md
+run_backend.ps1
+README.md

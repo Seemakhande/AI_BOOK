@@ -75,18 +75,20 @@ Option B: Run with custom backend URL (for deployed backend)
 
 DEPLOYMENT:
 
-Backend Deployment (Render.com):
-1. Create a Render account
-2. Connect your GitHub repository
-3. Create a new Web Service
-4. Set start command: uvicorn backend.main:app --host 0.0.0.0 --port 8000
-5. Add environment variable: GEMINI_API_KEY with your Gemini API key
-6. Deploy
+Backend Deployment (Vercel):
+1. Connect your GitHub repository to Vercel.
+2. Vercel will automatically detect the FastAPI backend.
+3. Add environment variable: GEMINI_API_KEY with your Gemini API key.
+4. Deploy. You will get a backend URL (e.g., https://your-project.vercel.app).
 
-Frontend Deployment (Vercel):
-Note: Vercel doesn't support Streamlit directly. Use alternative cloud platform like Heroku, Railway, or Render for Streamlit frontend.
-
-Alternative: Deploy both on Render or Railway as Web Services with appropriate start commands.
+Frontend Deployment (Streamlit Cloud):
+1. Push your code to GitHub.
+2. Go to Streamlit Cloud (share.streamlit.io).
+3. Connect your repository and select frontend/app.py as the main file.
+4. Add environment variables:
+   - BACKEND_URL: Your Vercel backend URL.
+   - GEMINI_API_KEY: Your Gemini API key.
+5. Deploy.
 
 TROUBLESHOOTING:
 
